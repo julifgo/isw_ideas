@@ -1,0 +1,1319 @@
+
+
+----STARTUP---- (4 December 2025 11:42:44) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!
+
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\44419.st----!
+
+!testRun: #TarjetaBajeTests #test01UnaTarjetaNuevaNoTieneSaldo stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test02SaldoDeTarjetaDescuentaElCostoDelViajeCuandoPagaEnColectivo stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test03SubteGastaSiempreMontoFijo stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test04ViajeEnTrenApoyandoAlSalirEnOtraParadaConsideraLaDiferencia stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test05ViajeEnTrenSinApoyarAlSalirCobraLaMismaTarifaQueAlApoyarParaEntrar stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test06TarjetaBajeSinDescuentoPagaTarifaCompleta stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test07TarjetaBajeEstudiantilPagaTarifaCompletaFinesDeSemana stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test08TarjetaBajeEstudiantilPagaMitadDeTarifaDiasDeSemana stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test09TarjetaBajeJubiladoTienePrimerosDosViajesGratisParaUnaFechaCualquieraYLuegoPagaTarifaCompleta stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!testRun: #TarjetaBajeTests #test10SeAplicaDescuentoDeTrasbordoAMenosQueTengaDescuentoOViajeGratis stamp: 'JFGO 12/4/2025 11:47:40'!
+PASSED!
+
+!classRemoval: #TarjetaBajeTests stamp: 'JFGO 12/4/2025 14:21:16'!
+TestCase subclass: #TarjetaBajeTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/4/2025 14:21:16'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeSinDescuento stamp: 'JFGO 12/4/2025 14:21:16'!
+TarjetaBaje subclass: #TarjetaBajeSinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeJubilado stamp: 'JFGO 12/4/2025 14:21:16'!
+TarjetaBaje subclass: #TarjetaBajeJubilado
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeEstudiantil stamp: 'JFGO 12/4/2025 14:21:16'!
+TarjetaBaje subclass: #TarjetaBajeEstudiantil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBaje stamp: 'JFGO 12/4/2025 14:21:17'!
+Object subclass: #TarjetaBaje
+	instanceVariableNames: 'saldo cantidadDeViajes horarioUltimoViaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaTren stamp: 'JFGO 12/4/2025 14:21:17'!
+LectorDeTarjeta subclass: #LectorDeTarjetaTren
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaSubte stamp: 'JFGO 12/4/2025 14:21:17'!
+LectorDeTarjeta subclass: #LectorDeTarjetaSubte
+	instanceVariableNames: 'montoFijo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaColectivo stamp: 'JFGO 12/4/2025 14:21:17'!
+LectorDeTarjeta subclass: #LectorDeTarjetaColectivo
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjeta stamp: 'JFGO 12/4/2025 14:21:17'!
+Object subclass: #LectorDeTarjeta
+	instanceVariableNames: 'paradas'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\44419.st----!
+
+!classRemoval: #TarjetaBajeTests stamp: 'JFGO 12/4/2025 14:21:51'!
+TestCase subclass: #TarjetaBajeTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/4/2025 14:21:51'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeSinDescuento stamp: 'JFGO 12/4/2025 14:21:51'!
+TarjetaBaje subclass: #TarjetaBajeSinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeJubilado stamp: 'JFGO 12/4/2025 14:21:51'!
+TarjetaBaje subclass: #TarjetaBajeJubilado
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeEstudiantil stamp: 'JFGO 12/4/2025 14:21:52'!
+TarjetaBaje subclass: #TarjetaBajeEstudiantil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBaje stamp: 'JFGO 12/4/2025 14:21:52'!
+Object subclass: #TarjetaBaje
+	instanceVariableNames: 'saldo cantidadDeViajes horarioUltimoViaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaTren stamp: 'JFGO 12/4/2025 14:21:52'!
+LectorDeTarjeta subclass: #LectorDeTarjetaTren
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaSubte stamp: 'JFGO 12/4/2025 14:21:52'!
+LectorDeTarjeta subclass: #LectorDeTarjetaSubte
+	instanceVariableNames: 'montoFijo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaColectivo stamp: 'JFGO 12/4/2025 14:21:52'!
+LectorDeTarjeta subclass: #LectorDeTarjetaColectivo
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjeta stamp: 'JFGO 12/4/2025 14:21:52'!
+Object subclass: #LectorDeTarjeta
+	instanceVariableNames: 'paradas'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----QUIT----(4 December 2025 14:21:55) CuisUniversity-7641.image priorSource: 8461877!
+
+----STARTUP---- (4 December 2025 14:22:16) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!
+
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\44419.st----!
+
+!classRemoval: #TarjetaBajeTests stamp: 'JFGO 12/4/2025 14:40:05'!
+TestCase subclass: #TarjetaBajeTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/4/2025 14:40:05'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeSinDescuento stamp: 'JFGO 12/4/2025 14:40:05'!
+TarjetaBaje subclass: #TarjetaBajeSinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeJubilado stamp: 'JFGO 12/4/2025 14:40:06'!
+TarjetaBaje subclass: #TarjetaBajeJubilado
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeEstudiantil stamp: 'JFGO 12/4/2025 14:40:06'!
+TarjetaBaje subclass: #TarjetaBajeEstudiantil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBaje stamp: 'JFGO 12/4/2025 14:40:06'!
+Object subclass: #TarjetaBaje
+	instanceVariableNames: 'saldo cantidadDeViajes horarioUltimoViaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaTren stamp: 'JFGO 12/4/2025 14:40:06'!
+LectorDeTarjeta subclass: #LectorDeTarjetaTren
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaSubte stamp: 'JFGO 12/4/2025 14:40:06'!
+LectorDeTarjeta subclass: #LectorDeTarjetaSubte
+	instanceVariableNames: 'montoFijo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaColectivo stamp: 'JFGO 12/4/2025 14:40:06'!
+LectorDeTarjeta subclass: #LectorDeTarjetaColectivo
+	instanceVariableNames: 'cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjeta stamp: 'JFGO 12/4/2025 14:40:07'!
+Object subclass: #LectorDeTarjeta
+	instanceVariableNames: 'paradas'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\97023.st----!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 14:40:29'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test02SeCobraElValorTotalEnUnUnViajeEnSubteSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 14:40:29'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03SeCobraElValorTotalEnUnUnViajeEnTrenSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 14:40:29'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 14:40:29'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test05SeCobraEl100PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsFinDeSemana stamp: 'JFGO 12/4/2025 14:40:29'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test06NoSeCobraNadaPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElPrimerViajeDelDia stamp: 'JFGO 12/4/2025 14:40:29'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07SeCobraElValorTotalPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElTercerViajeDelDia stamp: 'JFGO 12/4/2025 14:40:29'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test08EnUnViajeLaParadaDeOrigenYDestinoDebenSerDistintas stamp: 'JFGO 12/4/2025 14:40:29'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 14:40:32'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:19'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:22'!
+ERROR!
+!MedioDeTransporte methodsFor: 'as yet unclassified' stamp: 'JFGO 12/4/2025 15:06:52' prior: 50597256!
+distanciaEntre: unaParada y: otraParada 
+
+	|posicionCabecera posicion1raParada posicion2daParada dist1 dist2|
+	
+	posicionCabecera := recorrido at: cabecera. 
+	posicion1raParada := recorrido at: unaParada.
+	posicion2daParada := recorrido at: otraParada.
+	
+	dist1 :=  (posicionCabecera - posicion1raParada) abs.
+	dist2 := (posicionCabecera - posicion2daParada) abs.
+	
+	^ (dist1 - dist2) abs.! !
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:53'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:56'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02SeCobraElValorTotalEnUnUnViajeEnSubteSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03SeCobraElValorTotalEnUnUnViajeEnTrenSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:06:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 15:06:57'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test05SeCobraEl100PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsFinDeSemana stamp: 'JFGO 12/4/2025 15:06:57'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test06NoSeCobraNadaPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElPrimerViajeDelDia stamp: 'JFGO 12/4/2025 15:06:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07SeCobraElValorTotalPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElTercerViajeDelDia stamp: 'JFGO 12/4/2025 15:06:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08EnUnViajeLaParadaDeOrigenYDestinoDebenSerDistintas stamp: 'JFGO 12/4/2025 15:06:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 15:06:59'!
+ERROR!
+!Viaje methodsFor: 'as yet unclassified' stamp: 'JFGO 12/4/2025 15:11:00' prior: 50597519!
+seRealizóUnFinDeSemana
+
+	^fecha isSaturday or: [fecha isSunday]. ! !
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 15:11:01'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05SeCobraEl100PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsFinDeSemana stamp: 'JFGO 12/4/2025 15:11:03'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02SeCobraElValorTotalEnUnUnViajeEnSubteSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03SeCobraElValorTotalEnUnUnViajeEnTrenSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05SeCobraEl100PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsFinDeSemana stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06NoSeCobraNadaPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElPrimerViajeDelDia stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07SeCobraElValorTotalPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElTercerViajeDelDia stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08EnUnViajeLaParadaDeOrigenYDestinoDebenSerDistintas stamp: 'JFGO 12/4/2025 15:11:06'!
+PASSED!
+!Colectivo methodsFor: 'as yet unclassified' stamp: 'JFGO 12/4/2025 15:15:09' prior: 50597301!
+costoDeViajarDe: unaParada a: otraParada 
+
+	|distanciaEntreParadas| 
+	
+	distanciaEntreParadas := self distanciaEntre: unaParada y: otraParada. 
+	
+	(distanciaEntreParadas <= (5*kilometer)) ifTrue: [^600*peso].
+	"(distanciaEntreParadas <= (10*kilometer)) ifTrue: [^1000*peso]."
+	^1300*peso.! !
+
+!testRun: #ISWMetropolitanoTest #test01SeCobraElValorTotalEnUnUnViajeEnColectivoSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02SeCobraElValorTotalEnUnUnViajeEnSubteSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03SeCobraElValorTotalEnUnUnViajeEnTrenSinTrasbordosUsandoUnaTarjetaSinDescuentos stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04SeCobraEl50PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsDiaHábil stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05SeCobraEl100PorcientoDelValorTotalEnUnUnViajeSinTrasbordosUsandoUnaTarjetaEstudiantilSiEsFinDeSemana stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06NoSeCobraNadaPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElPrimerViajeDelDia stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07SeCobraElValorTotalPorUnViajeSinTrasbordosUsandoUnaTarjetaDeJubiladoSiEsElTercerViajeDelDia stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08EnUnViajeLaParadaDeOrigenYDestinoDebenSerDistintas stamp: 'JFGO 12/4/2025 15:15:11'!
+PASSED!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/4/2025 15:53:54'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Viaje stamp: 'JFGO 12/4/2025 15:53:54'!
+Object subclass: #Viaje
+	instanceVariableNames: 'medioDeTransporte fecha horario origen destino tarjetaBAJE'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBAJESinDescuento stamp: 'JFGO 12/4/2025 15:53:54'!
+TarjetaBAJE subclass: #TarjetaBAJESinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBAJEJubilado stamp: 'JFGO 12/4/2025 15:53:54'!
+TarjetaBAJE subclass: #TarjetaBAJEJubilado
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBAJEEstudiantil stamp: 'JFGO 12/4/2025 15:53:54'!
+TarjetaBAJE subclass: #TarjetaBAJEEstudiantil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBAJE stamp: 'JFGO 12/4/2025 15:53:54'!
+Object subclass: #TarjetaBAJE
+	instanceVariableNames: 'saldo viajesRealizados'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tren stamp: 'JFGO 12/4/2025 15:53:55'!
+MedioDeTransporte subclass: #Tren
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Subte stamp: 'JFGO 12/4/2025 15:53:55'!
+MedioDeTransporte subclass: #Subte
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Colectivo stamp: 'JFGO 12/4/2025 15:53:55'!
+MedioDeTransporte subclass: #Colectivo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #MedioDeTransporte stamp: 'JFGO 12/4/2025 15:53:55'!
+Object subclass: #MedioDeTransporte
+	instanceVariableNames: 'recorrido cabecera'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\55124.st----!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/5/2025 09:38:40'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TransportePublico stamp: 'JFGO 12/5/2025 09:38:41'!
+Object subclass: #TransportePublico
+	instanceVariableNames: 'nombre paradas cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaSinDescuento stamp: 'JFGO 12/5/2025 09:38:41'!
+Tarjeta subclass: #TarjetaSinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaJubilado stamp: 'JFGO 12/5/2025 09:38:42'!
+Tarjeta subclass: #TarjetaJubilado
+	instanceVariableNames: 'cantidadDeViajesHoy'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaEstudiantil stamp: 'JFGO 12/5/2025 09:38:42'!
+Tarjeta subclass: #TarjetaEstudiantil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tarjeta stamp: 'JFGO 12/5/2025 09:38:43'!
+Object subclass: #Tarjeta
+	instanceVariableNames: 'saldo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tarifa stamp: 'JFGO 12/5/2025 09:38:43'!
+Object subclass: #Tarifa
+	instanceVariableNames: 'distancia costo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Parada stamp: 'JFGO 12/5/2025 09:38:44'!
+Object subclass: #Parada
+	instanceVariableNames: 'nombre distanciaACabecera'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ISWMetropolitano stamp: 'JFGO 12/5/2025 09:38:44'!
+Object subclass: #ISWMetropolitano
+	instanceVariableNames: 'transportePublico diaYHora paradaDeOrigen paradaDeDestino tarjeta'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\19624.st----!
+
+!testRun: #ISWMetropolitanoTest #test01ViajeEnColectivoConMismoPuntoDePartidaNoSePuedeRealizar stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02ViajeEnColectivoDe5KmDisminuyeSaldoEnTarjetaSegunDistancia stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03ViajeEnColectivoDe10KmDisminuyeSaldoEnTarjetaSegunDistanciaMasLarga stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04ViajeEnSubteHastaElMismoPuntoDePartidaNoSePuedeRealizar stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05ViajeEnSubteDeCualquierDistanciaCobraMontoFijo stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06ViajeEnTrenHastaElMismoPuntoDePartidaNoSePuedeRealizar stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07ViajeEnTrenQueNoSeCierraCobraMaximoMonto stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08ViajeEnTrenQueSeCierraSeReintegraMonto stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test09NoSePuedeRealizarViajeEnColectivoConSaldoMenorATarifa stamp: 'JFGO 12/5/2025 09:52:57'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test10NoSePuedeRealizarViajeEnColectivoSinSaldo stamp: 'JFGO 12/5/2025 09:52:57'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test11NoSePuedeRealizarViajeEnSubteSinSaldo stamp: 'JFGO 12/5/2025 09:52:57'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test12NoSePuedeRealizarViajeEnTrenSinSaldo stamp: 'JFGO 12/5/2025 09:52:57'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test13TarjetaSinDescuentoPagaTarifaCompleta stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test14TarjetaJubiladoViajaPorPrimeraVezEnElDiaNoPaga stamp: 'JFGO 12/5/2025 09:52:57'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test15TarjetaJubiladoViajaPorTerceraVezEnElDiaPagaTarifaCompleta stamp: 'JFGO 12/5/2025 09:52:57'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test16TarjetaEstudianteViajaEnFinDeSemanaYPagaTarifaCompleta stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test17TarjetaEstudianteViajaEnDiaDeSemanaYPagaMediaTarifa stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test18TarjetaSinDescuentoViajaSinTrasbordoPagaTarifaCompleta stamp: 'JFGO 12/5/2025 09:52:57'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test19TarjetaSinDescuentoViajaConTrasbordoPagaMediaTarifa stamp: 'JFGO 12/5/2025 09:52:57'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test17TarjetaEstudianteViajaEnDiaDeSemanaYPagaMediaTarifa stamp: 'JFGO 12/5/2025 10:02:43'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test17TarjetaEstudianteViajaEnDiaDeSemanaYPagaMediaTarifa stamp: 'JFGO 12/5/2025 10:02:46'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test17TarjetaEstudianteViajaEnDiaDeSemanaYPagaMediaTarifa stamp: 'JFGO 12/5/2025 10:04:49'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test11NoSePuedeRealizarViajeEnSubteSinSaldo stamp: 'JFGO 12/5/2025 10:09:41'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test08ViajeEnTrenQueSeCierraSeReintegraMonto stamp: 'JFGO 12/5/2025 10:09:46'!
+PASSED!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/5/2025 11:18:55'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ViajeTren stamp: 'JFGO 12/5/2025 11:18:56'!
+ViajeTransporte subclass: #ViajeTren
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ViajeSubte stamp: 'JFGO 12/5/2025 11:18:56'!
+ViajeTransporte subclass: #ViajeSubte
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ViajeColectivo stamp: 'JFGO 12/5/2025 11:18:56'!
+ViajeTransporte subclass: #ViajeColectivo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #ViajeTransporte stamp: 'JFGO 12/5/2025 11:18:56'!
+Object subclass: #ViajeTransporte
+	instanceVariableNames: 'tarjeta origen destino paradas momentoViaje descuentoAplicado'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeSinDescuento stamp: 'JFGO 12/5/2025 11:18:56'!
+TarjetaBaje subclass: #TarjetaBajeSinDescuento
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeJubilado stamp: 'JFGO 12/5/2025 11:18:56'!
+TarjetaBaje subclass: #TarjetaBajeJubilado
+	instanceVariableNames: 'viajesGratis'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBajeEstudiante stamp: 'JFGO 12/5/2025 11:18:57'!
+TarjetaBaje subclass: #TarjetaBajeEstudiante
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaBaje stamp: 'JFGO 12/5/2025 11:18:57'!
+Object subclass: #TarjetaBaje
+	instanceVariableNames: 'saldo beneficio valorBoletoConDescuento viajesRealizados'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\90622.st----!
+
+!testRun: #ISWMetropolitanoTest #test01BajaTieneSaldoCargado stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02BajaNoTieneSaldoNoCargado stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03UsaColectivoDesdeOrigenHasta5KMYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04UsaColectivoDesdeOrigenHastaMasDe10KMYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05UsaColectivoDesdeOrigenHastaMasDe5KMyHasta10KMYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06UsaColectivoDesdeNoOrigenYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07UsaColectivoDesdeFinalHastaInicioYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08NoPuedeRealizarViajeSiSeQuedaSinMonto stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test09UsaSubteEnCualquierSentidoYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test10UsaTrenDesdeOrigenSinApoyarSubeALaSalidayDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test11UsaTrenDesdeOrigenPeroApoyaSubeyDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test12UsaTrenEnLaOtraDireccionPeroApoyaSubeyDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test13LaDireccionDebeSerLaCabeceraOElFinal stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test14LosTransportesNoPuedenTenerMenosDeDosParadas stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test15UsaTransporteConDescuentoEstudiantilUnDiaDeSemana stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test16UsaTransporteConDescuentoDeJubiladoUnaSolaVez stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test17UsaTransporteConDescuentoDeJubiladoMasDeDosVeces stamp: 'JFGO 12/5/2025 11:19:31'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test18UsaTransporte2VecesDentroDe2HorasObtieneDescuentoPorTransbordo stamp: 'JFGO 12/5/2025 11:19:31'!
+ERROR!
+
+!testRun: #ISWMetropolitanoTest #test09UsaSubteEnCualquierSentidoYDisminuyeSaldoEnBaja stamp: 'JFGO 12/5/2025 11:47:22'!
+PASSED!
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/5/2025 13:55:57'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: 'BajaEstudiantil'
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Viaje stamp: 'JFGO 12/5/2025 13:55:57'!
+Object subclass: #Viaje
+	instanceVariableNames: 'dia hora'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tren stamp: 'JFGO 12/5/2025 13:55:57'!
+Transporte subclass: #Tren
+	instanceVariableNames: 'fin inicio'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Subte stamp: 'JFGO 12/5/2025 13:55:57'!
+Transporte subclass: #Subte
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Colectivo stamp: 'JFGO 12/5/2025 13:55:58'!
+Transporte subclass: #Colectivo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Transporte stamp: 'JFGO 12/5/2025 13:55:58'!
+Object subclass: #Transporte
+	instanceVariableNames: 'paradas final cabecera'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #BajaJubilados stamp: 'JFGO 12/5/2025 13:55:59'!
+Baja subclass: #BajaJubilados
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #BajaEstudiantes stamp: 'JFGO 12/5/2025 13:55:59'!
+Baja subclass: #BajaEstudiantes
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Baja stamp: 'JFGO 12/5/2025 13:55:59'!
+Object subclass: #Baja
+	instanceVariableNames: 'saldo viajesRealizados viajesRealizado'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\cosas\UBA\isw1\docencia\parcial2\done\16023.st----!
+
+!testRun: #ISWMetropolitanoTest #test01LectorDeTarjetaParaSubteCobraUnCostoFijo stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02LectorDeTarjetaParaColectivoCobraSegunDistanciaARecorrer stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaCabecera stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaFinDeRecorrido stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaSalidaDeEstacion stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06TarjetaTieneQueTenerSaldoParaPoderPagar stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosLunes stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosViernes stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test09TarjetaConDescuentoEstudiantilPagaEl100PorcientoLosSabados stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test10TarjetaJubiladoNoPagaElPrimerViaje stamp: 'JFGO 12/5/2025 14:57:34'!
+PASSED!
+!TarjetaEstudiantil methodsFor: 'initialization' stamp: 'JFGO 12/5/2025 14:57:52' prior: 50600986!
+initializeConSaldoInicial: unSaldoInicial 
+	diasDeDescuento := {GregorianDay monday. 
+	GregorianDay friday.}.
+	super initializeConSaldoInicial: unSaldoInicial .! !
+
+!testRun: #ISWMetropolitanoTest #test01LectorDeTarjetaParaSubteCobraUnCostoFijo stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02LectorDeTarjetaParaColectivoCobraSegunDistanciaARecorrer stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaCabecera stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaFinDeRecorrido stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaSalidaDeEstacion stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06TarjetaTieneQueTenerSaldoParaPoderPagar stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosLunes stamp: 'JFGO 12/5/2025 14:57:54'!
+FAILURE!
+
+!testRun: #ISWMetropolitanoTest #test08TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosViernes stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test09TarjetaConDescuentoEstudiantilPagaEl100PorcientoLosSabados stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test10TarjetaJubiladoNoPagaElPrimerViaje stamp: 'JFGO 12/5/2025 14:57:54'!
+PASSED!
+!TarjetaEstudiantil methodsFor: 'initialization' stamp: 'JFGO 12/5/2025 14:58:30' prior: 50601587!
+initializeConSaldoInicial: unSaldoInicial 
+	diasDeDescuento := {GregorianDay tuesday. 
+	GregorianDay friday.}.
+	super initializeConSaldoInicial: unSaldoInicial .! !
+
+!testRun: #ISWMetropolitanoTest #test01LectorDeTarjetaParaSubteCobraUnCostoFijo stamp: 'JFGO 12/5/2025 14:58:32'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test02LectorDeTarjetaParaColectivoCobraSegunDistanciaARecorrer stamp: 'JFGO 12/5/2025 14:58:32'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test03LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaCabecera stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test04LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaFinDeRecorrido stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test05LectorDeTarjetaParaTrenCobraDistanciaDesdeParadaHastaSalidaDeEstacion stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test06TarjetaTieneQueTenerSaldoParaPoderPagar stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test07TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosLunes stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test08TarjetaConDescuentoEstudiantilPagaEl50PorcientoLosViernes stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test09TarjetaConDescuentoEstudiantilPagaEl100PorcientoLosSabados stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+!testRun: #ISWMetropolitanoTest #test10TarjetaJubiladoNoPagaElPrimerViaje stamp: 'JFGO 12/5/2025 14:58:33'!
+PASSED!
+
+----QUIT----(8 December 2025 09:11:48) CuisUniversity-7641.image priorSource: 8461877!
+
+----STARTUP---- (9 December 2025 17:09:52) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!
+
+
+!classRemoval: #ISWMetropolitanoTest stamp: 'JFGO 12/9/2025 17:09:59'!
+TestCase subclass: #ISWMetropolitanoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tren stamp: 'JFGO 12/9/2025 17:10:00'!
+Object subclass: #Tren
+	instanceVariableNames: 'recorrido cuadroTarifario cabecera'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaSinDescuento stamp: 'JFGO 12/9/2025 17:10:00'!
+Tarjeta subclass: #TarjetaSinDescuento
+	instanceVariableNames: 'descuento'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaJubilado stamp: 'JFGO 12/9/2025 17:10:00'!
+Tarjeta subclass: #TarjetaJubilado
+	instanceVariableNames: 'viajesRestantes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #TarjetaEstudiantil stamp: 'JFGO 12/9/2025 17:10:01'!
+Tarjeta subclass: #TarjetaEstudiantil
+	instanceVariableNames: 'diasDeDescuento'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Tarjeta stamp: 'JFGO 12/9/2025 17:10:01'!
+Object subclass: #Tarjeta
+	instanceVariableNames: 'ultimoMontoPagado saldo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Subte stamp: 'JFGO 12/9/2025 17:10:01'!
+Object subclass: #Subte
+	instanceVariableNames: 'recorrido cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Parada stamp: 'JFGO 12/9/2025 17:10:02'!
+Object subclass: #Parada
+	instanceVariableNames: 'nombre distanciaACabecera'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaTren stamp: 'JFGO 12/9/2025 17:10:02'!
+Object subclass: #LectorDeTarjetaTren
+	instanceVariableNames: 'lineaDeTren'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaSubte stamp: 'JFGO 12/9/2025 17:10:03'!
+Object subclass: #LectorDeTarjetaSubte
+	instanceVariableNames: 'lineaDeSubte'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #LectorDeTarjetaColectivo stamp: 'JFGO 12/9/2025 17:10:03'!
+Object subclass: #LectorDeTarjetaColectivo
+	instanceVariableNames: 'lineaDeColectivo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #CuadroTarifario stamp: 'JFGO 12/9/2025 17:10:03'!
+Object subclass: #CuadroTarifario
+	instanceVariableNames: 'costos costoMayor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+!classRemoval: #Colectivo stamp: 'JFGO 12/9/2025 17:10:04'!
+Object subclass: #Colectivo
+	instanceVariableNames: 'recorrido cuadroTarifario'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-2doParcial'!
+
+----End fileIn of C:\Users\juli_\Downloads\2025-2c-Recu-Final.st----!
+
+!testRun: #AterrizarComTest #test01NoSeEncuentranVuelosCuandoNoHayDefinicionesDeVuelos stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test02EncuentraUnVueloDeIdaCuandoCoincideLaBúsqueda stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test03NoEncuentraVueloCuandoElOrigenEsDistinto stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test04NoEncuentraVueloCuandoElDestinoEsDistinto stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test05NoEncuentraVueloCuandoNoVuelaEnLaFechaPedida stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test06NoEncuentraVuelosCuandoNoHayLugar stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test07SeEncuentraVueloDeIdaYVuelta stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test08NoEncuentraVueloDeIdaYVueltaSiNoHayIda stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test09NoEncuentraVueloDeIdaYVueltaSiNoHayVuelta stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test10SeEncuentraVuelosDeIdaYVueltaCombinandoVuelos stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test11SePuedeBuscarMásDeDosTramos stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test12NoEncuentraVuelosSiNoHayAlgúnTramo stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test13PartidaDeUnTramosDebeSerPosteriorALlegadaDeTramoAnterior stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test14AplicaDescuentoPorTramo stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test15NoAplicaDescuentoPorTramoCuandoOrigenEsDistinto stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test16NoAplicaDescuentoPorTramoCuandoElDestinoEsDistinto stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test17AplicaDescuentoPorFecha stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test18NoAplicaDescuentoPorFechaParaOtraFechaDePartida stamp: 'JFGO 12/9/2025 17:10:45'!
+PASSED!
+
+!testRun: #AterrizarComTest #test19AplicaDescuentoAVulosMultitramos stamp: 'JFGO 12/9/2025 17:10:45'!
+ERROR!
+
+!testRun: #AterrizarComTest #test07SeEncuentraVueloDeIdaYVuelta stamp: 'JFGO 12/9/2025 17:10:54'!
+ERROR!
+
+!classRemoval: #TodasLasCombinacionesTest stamp: 'JFGO 12/9/2025 17:13:49'!
+TestCase subclass: #TodasLasCombinacionesTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #AterrizarComTest stamp: 'JFGO 12/9/2025 17:13:49'!
+TestCase subclass: #AterrizarComTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #VueloMultitramos stamp: 'JFGO 12/9/2025 17:13:50'!
+Vuelo subclass: #VueloMultitramos
+	instanceVariableNames: 'tramos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #VueloDeIda stamp: 'JFGO 12/9/2025 17:13:50'!
+Vuelo subclass: #VueloDeIda
+	instanceVariableNames: 'definiciónDeVuelo fechaDePartida descuentos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #Vuelo stamp: 'JFGO 12/9/2025 17:13:51'!
+Object subclass: #Vuelo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DescuentoPorTramo stamp: 'JFGO 12/9/2025 17:13:51'!
+TipoDeDescuento subclass: #DescuentoPorTramo
+	instanceVariableNames: 'origen destino'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DescuentoPorFecha stamp: 'JFGO 12/9/2025 17:13:51'!
+TipoDeDescuento subclass: #DescuentoPorFecha
+	instanceVariableNames: 'fechaDePartida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #TipoDeDescuento stamp: 'JFGO 12/9/2025 17:13:52'!
+Object subclass: #TipoDeDescuento
+	instanceVariableNames: 'porcentaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #OpcionesDeTramo stamp: 'JFGO 12/9/2025 17:13:52'!
+Object subclass: #OpcionesDeTramo
+	instanceVariableNames: 'origen destino fechaDePartida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #Descuento stamp: 'JFGO 12/9/2025 17:13:53'!
+Object subclass: #Descuento
+	instanceVariableNames: 'tipo vuelo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DefiniciónDeVuelo stamp: 'JFGO 12/9/2025 17:13:53'!
+Object subclass: #DefiniciónDeVuelo
+	instanceVariableNames: 'código origen destino díasDeVuelo horaDePartida duración costo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #BuscadorDeVuelos stamp: 'JFGO 12/9/2025 17:13:53'!
+Object subclass: #BuscadorDeVuelos
+	instanceVariableNames: 'definicionesDeVuelos contadorDeVuelos tiposDeDescuentos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+----End fileIn of C:\Users\juli_\Downloads\2025-2C-Recuperatorio-Original.st----!
+
+!classRemoval: #TodasLasCombinacionesTest stamp: 'JFGO 12/9/2025 17:16:03'!
+TestCase subclass: #TodasLasCombinacionesTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2C-Recuperatorio'!
+
+----End fileIn of C:\Users\juli_\Downloads\2025-2c-Recu-Final.st----!
+
+!testRun: #AterrizarComTest #test01NoSeEncuentranVuelosCuandoNoHayDefinicionesDeVuelos stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test02EncuentraUnVueloDeIdaCuandoCoincideLaBúsqueda stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test03NoEncuentraVueloCuandoElOrigenEsDistinto stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test04NoEncuentraVueloCuandoElDestinoEsDistinto stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test05NoEncuentraVueloCuandoNoVuelaEnLaFechaPedida stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test06NoEncuentraVuelosCuandoNoHayLugar stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test07SeEncuentraVueloDeIdaYVuelta stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test08NoEncuentraVueloDeIdaYVueltaSiNoHayIda stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test09NoEncuentraVueloDeIdaYVueltaSiNoHayVuelta stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test10SeEncuentraVuelosDeIdaYVueltaCombinandoVuelos stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test11SePuedeBuscarMásDeDosTramos stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test12NoEncuentraVuelosSiNoHayAlgúnTramo stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test13PartidaDeUnTramosDebeSerPosteriorALlegadaDeTramoAnterior stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test14AplicaDescuentoPorTramo stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test15NoAplicaDescuentoPorTramoCuandoOrigenEsDistinto stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test16NoAplicaDescuentoPorTramoCuandoElDestinoEsDistinto stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test17AplicaDescuentoPorFecha stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test18NoAplicaDescuentoPorFechaParaOtraFechaDePartida stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+!testRun: #AterrizarComTest #test19AplicaDescuentoAVulosMultitramos stamp: 'JFGO 12/9/2025 17:16:17'!
+PASSED!
+
+todosLosVuelosPorTramos todasLasCombinaciones !
+
+----QUIT----(9 December 2025 21:32:26) CuisUniversity-7641.image priorSource: 8638500!
+
+----STARTUP---- (22 December 2025 15:54:46) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!
+
+
+----QUIT----(23 December 2025 19:26:58) CuisUniversity-7641.image priorSource: 8744066!
+
+----STARTUP---- (3 February 2026 12:03:14) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!
+
+
+!classRemoval: #TodasLasCombinacionesTest stamp: 'JFGO 2/3/2026 12:03:23'!
+TestCase subclass: #TodasLasCombinacionesTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #AterrizarComTest stamp: 'JFGO 2/3/2026 12:03:23'!
+TestCase subclass: #AterrizarComTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #VueloMultitramos stamp: 'JFGO 2/3/2026 12:03:23'!
+Vuelo subclass: #VueloMultitramos
+	instanceVariableNames: 'tramos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #VueloDeIda stamp: 'JFGO 2/3/2026 12:03:23'!
+Vuelo subclass: #VueloDeIda
+	instanceVariableNames: 'definiciónDeVuelo fechaDePartida descuentos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #Vuelo stamp: 'JFGO 2/3/2026 12:03:24'!
+Object subclass: #Vuelo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DescuentoPorTramo stamp: 'JFGO 2/3/2026 12:03:24'!
+TipoDeDescuento subclass: #DescuentoPorTramo
+	instanceVariableNames: 'origen destino'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DescuentoPorFecha stamp: 'JFGO 2/3/2026 12:03:24'!
+TipoDeDescuento subclass: #DescuentoPorFecha
+	instanceVariableNames: 'fechaDePartida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #TipoDeDescuento stamp: 'JFGO 2/3/2026 12:03:24'!
+Object subclass: #TipoDeDescuento
+	instanceVariableNames: 'porcentaje'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #OpcionesDeTramo stamp: 'JFGO 2/3/2026 12:03:24'!
+Object subclass: #OpcionesDeTramo
+	instanceVariableNames: 'origen destino fechaDePartida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #Descuento stamp: 'JFGO 2/3/2026 12:03:24'!
+Object subclass: #Descuento
+	instanceVariableNames: 'tipo vuelo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #DefiniciónDeVuelo stamp: 'JFGO 2/3/2026 12:03:25'!
+Object subclass: #DefiniciónDeVuelo
+	instanceVariableNames: 'código origen destino díasDeVuelo horaDePartida duración costo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+!classRemoval: #BuscadorDeVuelos stamp: 'JFGO 2/3/2026 12:03:25'!
+Object subclass: #BuscadorDeVuelos
+	instanceVariableNames: 'definicionesDeVuelos contadorDeVuelos tiposDeDescuentos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '2025-2c-Recu'!
+
+TestCase subclass: #CongresoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Congreso'!
+
+!classDefinition: #CongresoTest category: #Congreso stamp: 'JFGO 2/3/2026 12:03:57'!
+TestCase subclass: #CongresoTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Congreso'!
+!CongresoTest methodsFor: 'as yet unclassified' stamp: 'JFGO 2/3/2026 12:07:40'!
+test01CongresoDebeTenerAlMenosUnCongresistaEnCadaPartido
+	self should: [] raise: Error  withExceptionDo: [:e | ]! !

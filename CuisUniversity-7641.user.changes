@@ -1317,3 +1317,5 @@ TestCase subclass: #CongresoTest
 !CongresoTest methodsFor: 'as yet unclassified' stamp: 'JFGO 2/3/2026 12:07:40'!
 test01CongresoDebeTenerAlMenosUnCongresistaEnCadaPartido
 	self should: [] raise: Error  withExceptionDo: [:e | ]! !
+
+----STARTUP---- (6 February 2026 11:35:23) as C:\Users\juli_\cosas\UBA\isw1\docencia\cuis7641_1\windows64\CuisUniversity-7641.image!

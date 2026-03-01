@@ -803,18 +803,21 @@ test23EnEmergenciaOportunistasVotanAFavor
 
 !CongresoTest methodsFor: 'modo emergencia' stamp: 'JFGO 2/28/2026 18:00:00'!
 test24EnEmergenciaOportunistasNoCambianDePartido
-	| partidoAzul partidoRojo congreso proyectoLeyRechazado proyectoLey votacion oportunistaAzul |
+	| partidoAzul partidoRojo congreso proyectoLeyConstitucional proyectoLey votacion oportunistaAzul |
 	oportunistaAzul := CongresistaOportunista new.
 	partidoAzul := Partido conCongresistas: (OrderedCollection with: CongresistaLeal new with: oportunistaAzul).
 	partidoRojo := Partido conCongresistas: (OrderedCollection with: CongresistaLeal new with: CongresistaLeal new with: CongresistaLeal new).
 	congreso := Congreso conPartidoAzul: partidoAzul conPartidoRojo: partidoRojo.
-	proyectoLeyRechazado := ProyectoLeyOrdinaria dePartido: partidoAzul.
-	4 timesRepeat: [congreso votar: proyectoLeyRechazado].
+	"Usar ley constitucional para entrar en emergencia sin mover oportunistas"
+	proyectoLeyConstitucional := ProyectoLeyConstitucional dePartido: partidoAzul.
+	4 timesRepeat: [congreso votar: proyectoLeyConstitucional].
 	self assert: congreso estaEnEmergencia.
 	self assert: partidoAzul totalCongresistas equals: 2.
 	self assert: partidoRojo totalCongresistas equals: 3.
+	"Ahora votamos ley ordinaria que pierde"
 	proyectoLey := ProyectoLeyOrdinaria dePartido: partidoAzul.
 	votacion := congreso votar: proyectoLey.
+	"La ley pierde pero el oportunista no se mueve (estamos en emergencia)"
 	self deny: votacion proyectoAprobado.
 	self assert: partidoAzul totalCongresistas equals: 2.
 	self assert: partidoRojo totalCongresistas equals: 3.! !
